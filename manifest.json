@@ -1,0 +1,50 @@
+{
+    "manifest_version": 3,
+    "name": "Unity Secure Pass",
+    "description": "Extensão para verificar a criptografia de senhas do lado do cliente.",
+    "version": "1.0",
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "permissions": [
+        "tabs",
+        "webRequest",
+        "declarativeNetRequestWithHostAccess",
+        "declarativeNetRequest",
+        "declarativeNetRequestFeedback",
+        "activeTab",
+        "scripting"
+    ],
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "rule",
+                "enabled": true,
+                "path": "rule.json"
+            }
+        ]
+    },
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_icon": "icon16.png",
+        "default_title": "Unity Secure Pass",
+        "default_popup": "index.html"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "images/*"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "unity-secure-pass",
+  "version": "1.0.0",
+  "description": "Abra o Google Chrome e acesse a página chrome://extensions.",
+  "main": "background.js",
+  "author": "Bruno Brandão Silva",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "^0.0.227"
+  }
+}
