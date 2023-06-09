@@ -87,7 +87,6 @@ function SendModal() {
 	return new Promise<boolean>((resolve) => {
 		const body = document.querySelector('body') as HTMLBodyElement;
 		const dialog = document.createElement('dialog');
-		// const img_src = chrome.runtime.getURL('images/alert.png');
 		dialog.innerHTML = `${styles}
 				${svg}
                 <h1>Alerta de segurança!</h1>
@@ -100,6 +99,7 @@ function SendModal() {
 		btnCancelar.addEventListener('click', () => {
 			dialog.remove();
 			modal = false;
+            window.location.reload();
 			resolve(false)
 		});
 		const btnContinuar = document.createElement('button');
