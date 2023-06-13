@@ -15,7 +15,8 @@
         "declarativeNetRequest",
         "declarativeNetRequestFeedback",
         "activeTab",
-        "scripting"
+        "scripting",
+        "storage"
     ],
     "declarative_net_request": {
         "rule_resources": [
